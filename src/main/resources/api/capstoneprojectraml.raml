@@ -1,0 +1,65 @@
+#%RAML 1.0
+baseUri: https://anypoint.mulesoft.com/mocking/api/v1/links/31dfc743-b266-4427-ae07-2386e6f79438/ # 
+title: CapstoneProjectRAML
+
+/Users:
+  get:
+    description: "All Users"
+    responses:
+      200:
+        body:
+          application/json:
+            example:
+              {
+            "id": 1,
+            "first": "Adam",
+            "last": "Bob",
+            "department": "IIB"}
+  post:
+    description: "Create Users"
+    responses:
+      200:
+        body:
+          application/json:
+            example:
+              {
+              "first": "Adam",
+                "last": "Bob",
+              "department": "IIB"}
+  put:
+    description: "Update User"
+    responses:
+      200:
+        body:
+          application/json:
+            example:
+              {
+              "id": 1,
+              "first": "Adam",
+              "last": "Bob",
+              "department": "IIB"}
+/{id}:
+  get:
+    description: "Find User"
+    responses:
+      200:
+        body:
+          application/json:
+            example:
+              {
+            "id": 1,
+            "first": "Adam",
+            "last": "Bob",
+            "department": "IIB"}
+  delete:
+    description: "Delete User"
+    responses:
+      200:
+        body:
+          application/json:
+            example:
+                {
+            "id": 1,
+            "first": "Adam",
+            "last": "Bob",
+            "department": "IIB"}

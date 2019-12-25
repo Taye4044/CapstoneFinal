@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:munit="http://www.mulesoft.org/schema/mule/munit" xmlns:munit-tools="http://www.mulesoft.org/schema/mule/munit-tools"
+	xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xsi:schemaLocation="
+		http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+		http://www.mulesoft.org/schema/mule/munit http://www.mulesoft.org/schema/mule/munit/current/mule-munit.xsd
+		http://www.mulesoft.org/schema/mule/munit-tools  http://www.mulesoft.org/schema/mule/munit-tools/current/mule-munit-tools.xsd">
+	<munit:config name="capstoneprojectraml-test-suite.xml" />
+	<munit:test name="capstoneprojectraml-test-suite-put:\Users:capstoneprojectraml-configTest" doc:id="32adf01c-52a8-4ef5-ba2f-d436a421367d" description="Test">
+		<munit:execution >
+			<flow-ref doc:name="Flow-ref to put:\Users:capstoneprojectraml-config" doc:id="5270e83c-c48c-4179-8771-662f4af0a5f0" name="put:\Users:capstoneprojectraml-config"/>
+		</munit:execution>
+		<munit:validation >
+			<munit-tools:assert-that doc:name="Assert that" doc:id="f4c8b1bb-e08e-412f-a841-4d19eb141f83" message="not null value is expected" expression="#[payload]" is="#[MunitTools::anyOf([MunitTools::notNullValue(),MunitTools::withMediaType('text/json')])]"/>
+		</munit:validation>
+	</munit:test>
+	<munit:test name="capstoneprojectraml-test-suite-delete:\(id):capstoneprojectraml-configTest" doc:id="d8ea478c-c8d7-48c6-af8b-f9938915699e" description="Test">
+		<munit:execution >
+			<flow-ref doc:name="Flow-ref to delete:\(id):capstoneprojectraml-config" doc:id="8cf11b01-89c2-47b0-840f-1cd86b6bffae" name="delete:\(id):capstoneprojectraml-config"/>
+		</munit:execution>
+		<munit:validation >
+			<munit-tools:assert-that doc:name="Assert that" doc:id="98f4316a-1b25-4766-b810-63391c0d029d" expression="#[payload]" is="#[MunitTools::anyOf([MunitTools::notNullValue(),MunitTools::withMediaType('text/json')])]"/>
+		</munit:validation>
+	</munit:test>
+	<munit:test name="capstoneprojectraml-test-suite-get:\Users:capstoneprojectraml-configTest" doc:id="ad6a7d2b-369b-407a-aa6e-c33278f0ccc5" description="Test">
+		<munit:execution >
+			<flow-ref doc:name="Flow-ref to get:\Users:capstoneprojectraml-config" doc:id="6c627627-f447-40e4-b600-19cd2bdae489" name="get:\Users:capstoneprojectraml-config"/>
+		</munit:execution>
+		<munit:validation >
+			<munit-tools:assert-that doc:name="Assert that" doc:id="cbd8cfc8-d347-40fe-84bd-7f2828f1de2a" expression="#[payload]" is="#[MunitTools::anyOf([MunitTools::notNullValue(),MunitTools::withMediaType('text/json')])]"/>
+		</munit:validation>
+	</munit:test>
+	<munit:test name="capstoneprojectraml-test-suite-get:\(id):capstoneprojectraml-configTest" doc:id="0199a471-5429-4f2b-94bd-1876da0af7fb" description="Test">
+		<munit:execution >
+			<flow-ref doc:name="Flow-ref to get:\(id):capstoneprojectraml-config" doc:id="9f955a8a-d86c-4ce7-8c5d-92c3c2e949b3" name="get:\(id):capstoneprojectraml-config"/>
+		</munit:execution>
+		<munit:validation >
+			<munit-tools:assert-that doc:name="Assert that" doc:id="63ee1150-deb2-4d94-8f14-25b6b5d48805" expression="#[payload]" is="#[MunitTools::anyOf([MunitTools::notNullValue(),MunitTools::withMediaType('text/json')])]"/>
+		</munit:validation>
+	</munit:test>
+	<munit:test name="capstoneprojectraml-test-suite-post:\Users:capstoneprojectraml-configTest" doc:id="1fe3f9bc-cc06-47b3-83af-d13e6046b544" description="Test">
+		<munit:execution >
+			<flow-ref doc:name="Flow-ref to post:\Users:capstoneprojectraml-config" doc:id="2bada5ee-a305-44e4-bb9d-34a358f4df7b" name="post:\Users:capstoneprojectraml-config"/>
+		</munit:execution>
+		<munit:validation >
+			<munit-tools:assert-that doc:name="Assert that" doc:id="ae311a6b-bde8-4139-a854-313fa8df3b1d" expression="#[payload]" is="#[MunitTools::anyOf([MunitTools::notNullValue(),MunitTools::withMediaType('text/json')])]"/>
+		</munit:validation>
+	</munit:test>
+
+
+</mule>
